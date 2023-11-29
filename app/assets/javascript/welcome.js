@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log('La página de bienvenida se ha cargado completamente.');
 
-  // Obtén los datos directamente desde el atributo data-table-data
-  var jsonData = document.getElementById('tabla-container').dataset.tableData;
+  // Obtén los datos directamente desde la variable JavaScript
+  var jsonData = window.jsonData;
+  console.log('Table Data:', jsonData);
 
   // Intenta analizar la cadena JSON
   try {
@@ -39,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Error al analizar el JSON:', error);
   }
 });
-
-// hay error en la linea 9, al parecer parse esta generando conflictos o no esta funcionando, 
-//PERO ya se obtubieron avances y se puede obtener el json del controlador a la vista a js
+ 
+ 
+ // hay error en la linea 9, al parecer parse esta generando conflictos o no esta funcionando,
+ //PERO ya se obtubieron avances y se puede obtener el json del controlador a la vista a js
+ 

@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'welcome', 'data-turbolinks-track': 'reload' %>
-    <!-- app/views/welcome/index.html.erb -->
-    <div id="tabla-container" data-table-data=<%= @table_data.to_json.html_safe %>></div>
-    <!--
-    <%= javascript_tag do %>
-        console.log('Table Data:', document.getElementById('tabla-container').dataset.tableData);
-    <% end %>
-    -->
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'welcome', 'data-turbolinks-track': 'reload' %>
+</head>
 <body>
-    <div class="container">
-        <h1>Registro</h1>
-    </div>
-    <!-- app/views/welcome/index.html.erb -->
-    <div id="tabla-container"></div>
+  <div class="container">
+    <h1>Registro</h1>
+  </div>
+  <!-- Alimenta directamente el JSON a una variable JavaScript -->
+  <script>
+    var jsonData = <%= @table_data.to_json.html_safe %>;
+  </script>
+  <!-- Renderiza la tabla en el contenedor correspondiente -->
+  <div id="tabla-container"></div>
 </body>
 </html>
