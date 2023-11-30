@@ -40,8 +40,3 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Error al analizar el JSON:', error);
   }
 });
- 
- 
- // hay error en la linea 9, al parecer parse esta generando conflictos o no esta funcionando,
- //PERO ya se obtubieron avances y se puede obtener el json del controlador a la vista a js
- 
