@@ -13,7 +13,7 @@ html {
 
 .container {
     text-align: center;
-    background-color: rgb(255, 255, 255);/*transparencia */
+    background-color: #00001a;/*transparencia */
     padding: 20px;
     border-radius: 10px;
 }
@@ -22,7 +22,7 @@ html {
 #tabla-container {
     margin: 1px;
     padding: 1px;
-    border: 1px solid rgba(155, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
 }
 
 
@@ -33,16 +33,17 @@ table {
 }
 
 th, td {
-    background-color: #f2f2f2;
+    background-color: #1a1a33;
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 th {
-    background-color: rgb(255, 255, 255);
+    background-color: #0c0c22;
 }
 
 h1 {
-    color: #333
+    color: rgb(255, 255, 255);
 }
