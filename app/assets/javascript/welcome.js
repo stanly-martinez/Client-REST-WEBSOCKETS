@@ -1,3 +1,5 @@
+// app/assets/javascript/welcome.js
+
 document.addEventListener('DOMContentLoaded', function() {
   console.log('La página de bienvenida se ha cargado completamente.');
 
@@ -31,12 +33,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
 
-      // Agrega la tabla al cuerpo del documento
-      document.body.appendChild(table);
+      // Agrega la tabla al contenedor especificado
+      var tablaContainer = document.getElementById('tabla-container');
+      tablaContainer.appendChild(table);
     } else {
       console.error('Error: El JSON no es un array.');
     }
   } catch (error) {
     console.error('Error al analizar el JSON:', error);
   }
+
+  // Configuración de Action Cable
+  App.notificarCambios = App.cable.subscriptions.create("NotificarCambiosChannel", {
+    connected() {
+      console.log("Conectado al canal de notificación de cambios.");
+    },
+
+    disconnected() {
+      console.log("Desconectado del canal de notificación de cambios.");
+    },
+
+    received(data) {
+      console.log("Datos recibidos:", data);
+
+      // recarga de l pagina
+      window.location.reload();
+    }
+  });
 });
