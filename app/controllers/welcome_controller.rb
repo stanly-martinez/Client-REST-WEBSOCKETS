@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
     http = Net::HTTP.new(url.host, url.port)
 
     # Desactivas la siguiente linea sino se esta usando https
-#    http.use_ssl = true
+    #http.use_ssl = true
 
    request = Net::HTTP::Get.new(url.path)
 
