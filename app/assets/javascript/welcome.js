@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Itera sobre los datos JSON y crea filas
       parsedData.forEach(function(item) {
         var row = table.insertRow();
-        ['ID', 'DESDE', 'HASTA', 'ESPACIO'].forEach(function(key) {
+        ['idReserva', 'desde', 'hasta', 'espacio'].forEach(function(key) {
           var cell = row.insertCell();
           cell.textContent = item[key];
         });
