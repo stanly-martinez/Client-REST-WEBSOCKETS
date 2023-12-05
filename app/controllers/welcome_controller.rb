@@ -5,7 +5,7 @@ require 'net/http'
 class WelcomeController < ApplicationController
   def index
     # Aquí se debe obtener el JSON desde REST
-    url = URI.parse('http://ejemplo.com/')
+    url = URI.parse('http://localhost:8080/ParqueoWebapp-1.0-SNAPSHOT/resources/reserva')
     http = Net::HTTP.new(url.host, url.port)
 
     # Desactivas la siguiente linea sino se esta usando https
