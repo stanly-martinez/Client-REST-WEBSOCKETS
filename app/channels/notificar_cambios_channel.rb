@@ -7,6 +7,11 @@ class NotificarCambiosChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
+
+  def 
+    transmit("hay cambios en la tabla.")
+  end
+  
   # Llamada al servidor
 #  def receive(data)
     #manejar mensaje recibido
