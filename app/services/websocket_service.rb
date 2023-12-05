@@ -5,7 +5,7 @@ require 'websocket-eventmachine-client'
 class WebsocketService
   def self.connect
     EM.run do
-      ws = WebSocket::EventMachine::Client.connect(uri: 'ws://servidor/wsnotificar_cambios')
+      ws = WebSocket::EventMachine::Client.connect(uri: 'ws://localhost:8080/ParqueoWebapp/wsnotificar_cambioss')
 
       ws.onopen do
         puts 'Conectado al servidor WebSocket'
