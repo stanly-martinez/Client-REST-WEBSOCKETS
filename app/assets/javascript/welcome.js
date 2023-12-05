@@ -60,22 +60,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Configuración de Action Cable
-//  App.notificarCambios = App.cable.subscriptions.create("NotificarCambiosChannel", {
-//    connected() {
-//      console.log("Conectado al canal de notificación");
-//    },
+  App.notificarCambios = App.cable.subscriptions.create("NotificarCambiosChannel", {
+    connected() {
+      console.log("Conectado al canal de notificación");
+    },
 
-//    disconnected() {
-//      console.log("Desconectado del canal de notificación");
-//    },
+    disconnected() {
+      console.log("Desconectado del canal de notificación");
+    },
 
-//    received(data) {
-//      console.log("Datos Recibidos: ", data);
+    received(data) {
+      console.log("Datos Recibidos: ", data);
 
-//      // Al recibir la notificación, hacer una solicitud REST para obtener los datos actualizados
-//      solicitarDatosActualizados();
-//    }
-//  });
+      // Al recibir la notificación, hacer una solicitud REST para obtener los datos actualizados
+      solicitarDatosActualizados();
+    }
+  });
 
   // Función para solicitar datos actualizados a través de REST
   function solicitarDatosActualizados() {
