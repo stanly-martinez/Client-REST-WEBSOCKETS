@@ -5,21 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 3.1.2p20
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Services - Rails
 
 * Deployment instructions
-
-* ...
+  -cd Cliente_REST_WEBSOCKETS
+  -bunle install
+  -rails server
+  
 # Cliente_REST_WEBSOCKETS
