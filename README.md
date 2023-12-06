@@ -10,8 +10,8 @@ Things you may want to cover:
 * Services - Rails
 
 * Deployment instructions
-  -cd Cliente_REST_WEBSOCKETS
-  -bunle install
-  -rails server
+-cd Cliente_REST_WEBSOCKETS
+-bunle install
+-rails server
   
 # Cliente_REST_WEBSOCKETS
